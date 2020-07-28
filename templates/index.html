@@ -1,0 +1,45 @@
+<!--DOCTYPE html-->
+<html lang="ja">
+<meta charset="utf-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>簡易掲示板</title>
+</head>
+<body>
+      <h1>Jupyer　PythonCode</h1>
+      <!--
+      <form action="/result" method="post">
+          <input type="hidden" name="comment_box">
+          <label for="comment_">投稿</label>
+          <textarea name="comment_data" rows="6" cols="50"></textarea>
+          <p></p>
+          <label for="name">名前</label>
+          <input type="text" name="name">
+          <button type="submit">送信する</button>
+          </form>
+      -->
+      
+      <form method="post" action="">
+        　<table class="table" border="1">
+              <thead class="thead-dark">
+                  <tr>
+                      <th>日付</th>
+                      <th>名前</th>
+                      <th>投稿内容</th>
+                      </tr>
+                  </thead>
+              <tbody>
+                  {% for th in lines %}
+                  <tr>
+                      <td>{{ th.pub_date }}</td>
+                      <td>{{ th.name }}</td>
+                      <td>{{ th.comment }}</td>
+                      </tr>
+                  {% endfor %}
+                  </tbody>
+              </table>
+          </form>
+      
+     <p></p>
+</body> 
+</html>
